@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido - La Roca de Oro</title>
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            width: 700px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .menu-title {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .menu-buttons {
+            margin-top: 10px;
+        }
+
+        button {
+            display: block;
+            width: 180px;
+            padding: 8px;
+            margin: 8px 0;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #f1f1f1;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bienvenido</h1>
+        <h2>Distribuidora La Roca de Oro</h2>
+        
+        <p><strong>Usuario:</strong> <span id="nombreUsuario"></span></p>
+
+        <p class="menu-title">MENU</p>
+
+        <div class="menu-buttons">
+            <button>Productos</button>
+            <button>Clientes</button>
+            <button>Proveedores</button>
+            <button>Categorías</button>
+            <button>Bitácora</button>
+            <button>Ventas</button>
+            <button>Consulta General</button>
+            <button>Registrar Nuevo Usuario</button>
+        </div>
+    </div>
+
+    <script>
+        // Recupera el nombre del usuario desde login.html
+        const params = new URLSearchParams(window.location.search);
+        const usuario = params.get("usuario");
+
+        // Lo muestra en pantalla
+        document.getElementById("nombreUsuario").textContent = usuario ?? "Invitado";
+    </script>
+
+</body>
+</html>
