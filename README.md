@@ -1,2 +1,100 @@
 # La-Roca-de-Oro
 Proyecto integrador de sistema de gestión de inventario
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - La Roca de Oro</title>
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: white;
+            width: 600px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            width: 120px;
+            font-size: 18px;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 170px;
+            padding: 6px;
+            font-size: 18px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 8px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 0 15px;
+            border-radius: 4px;
+            border: 1px solid #555;
+        }
+
+        button:hover {
+            background-color: #dcdcdc;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>LA ROCA DE ORO</h1>
+        
+        <!-- Al enviar el formulario redirige a bienvenida.html -->
+        <form action="bienvenida.html" method="GET">
+            <div class="form-group">
+                <label>Usuario</label>
+                <input type="text" name="usuario" required>
+            </div>
+
+            <div class="form-group">
+                <label>Contraseña</label>
+                <input type="password" name="pass" required>
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Ingresa</button>
+                <button type="reset">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
